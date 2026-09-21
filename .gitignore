@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.tmp
+~$*.docx
+.DS_Store
+Thumbs.db
+
+# Keep manuscripts, reviewer files, and generated revision packages out of Git.
+inputs/
+outputs/
+work/
+*.pdf

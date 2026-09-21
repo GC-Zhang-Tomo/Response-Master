@@ -1,0 +1,4 @@
+*.docx binary
+*.md text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
