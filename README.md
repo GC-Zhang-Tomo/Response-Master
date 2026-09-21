@@ -42,10 +42,24 @@ The skill supports three modes:
 
 ## Required inputs / 建议输入
 
-- The originally submitted manuscript, including supplementary information when relevant.
-- Complete editor and reviewer comments in their original order.
-- New experimental or analytical results, even if they are still in scattered notes.
-- Proposed changes and any supervisor-specific requirements.
+Before drafting, the skill runs a mandatory intake gate in chat. It reports every required input as `Received`, `Incomplete`, or `Missing` and does not start the point-by-point response until all three required inputs are usable:
+
+1. The exact originally submitted manuscript reviewed by the journal.
+2. The complete reviewer comments, with the editor decision letter when available.
+3. A coherent added-experiment evidence summary containing the concrete data, experimental conditions, and results intended to answer the reviewers.
+
+The evidence summary should identify the linked reviewer concern, experiment or analysis, samples and groups, conditions and controls, replicates or sample size, statistical method and values, result, source figure or table, interpretation, limitations, and completed-versus-planned status wherever those fields apply.
+
+首次为一个返修项目调用本 Skill 时，Codex 必须先在聊天中输出材料检查清单。初次投稿稿件、完整审稿意见以及包含具体数据、实验条件和结果的补充实验汇总文件，三者缺一时不得开始撰写 response。
+
+The skill also recommends, without treating them as hard blockers:
+
+- Supplementary Information;
+- new or revised figures, legends, tables, and source data;
+- detailed methods, statistical outputs, and relevant references;
+- journal decision and revision instructions;
+- supervisor requirements and preferred response strategy;
+- earlier response letters and revised manuscripts for later revision rounds.
 
 A prewritten response and a pre-revised manuscript are not required. They are outputs of the workflow.
 
@@ -82,6 +96,17 @@ git clone https://github.com/GC-Zhang-Tomo/Response-Master.git .agents/skills/la
 
 Open or restart the Codex project after installation. The skill is triggered by post-submission revision tasks that match the description in [`SKILL.md`](SKILL.md).
 
+On first use for a revision package, invoke the skill and let it run the intake gate before asking it to draft:
+
+```text
+Use $lab-reviewer-response for this returned manuscript package.
+First show the mandatory input checklist in chat. Do not draft the response until
+the originally submitted manuscript, complete reviewer comments, and the
+added-experiment evidence summary are all present and usable.
+```
+
+Installing a local skill does not itself send a chat message. The checklist appears when the skill is first invoked for a revision package.
+
 The optional template builder and output checker require Python and `python-docx`:
 
 ```powershell
@@ -96,10 +121,11 @@ Use the lab-reviewer-response skill on this revision package.
 Inputs:
 - the originally submitted manuscript;
 - the complete reviewer comments;
-- our new experiments and analysis notes;
+- our added-experiment evidence summary with concrete data, conditions, and results;
 - the PI's additional requirements.
 
-First produce a point-by-point response and a manuscript revision map.
+First show the mandatory intake checklist in chat. When all required inputs pass,
+produce a point-by-point response and a manuscript revision map.
 Do not treat planned experiments as completed. Flag every unresolved value or
 location for author confirmation. After the map is approved, apply it to the
 original manuscript and mark only changed text in red.

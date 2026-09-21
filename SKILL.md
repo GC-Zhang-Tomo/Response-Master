@@ -9,6 +9,42 @@ Use this skill for a returned manuscript revision. The normal inputs are the ori
 
 The user's instructions and the current manuscript evidence control the scientific content. The included templates control the lab's response and revision-map presentation.
 
+## Run the mandatory intake gate
+
+At the first activation for every new revision package, respond in chat with an input checklist before drafting any response text or creating any deliverable. Match the user's language. Inventory the supplied files and label each required item `Received`, `Incomplete`, or `Missing`.
+
+Do not draft the point-by-point response until all three required inputs are present and usable:
+
+1. **Originally submitted manuscript:** the exact manuscript version reviewed by the journal, preferably as an editable Word file. The main text is mandatory.
+2. **Complete editor and reviewer comments:** the decision letter and all reviewer comments in their original order. Reviewer comments are mandatory even when the decision letter is unavailable.
+3. **Added-experiment evidence summary:** a coherent file that records the concrete data, experimental conditions, and result summary intended to answer the reviewers. Supporting figures, tables, spreadsheets, or raw-output files may accompany it, but they do not replace the summary file.
+
+Treat the added-experiment evidence summary as incomplete unless it identifies, where applicable, the linked reviewer concern, experiment or analysis performed, samples and groups, conditions and controls, sample size or replicate information, statistical method and values, quantitative or qualitative result, source figure or table, interpretation, limitations, and whether each item is completed or only planned. Do not demand fields that genuinely do not apply, but call out material omissions.
+
+Use this chat intake structure:
+
+```text
+Before I draft the response, I need to verify the revision package.
+
+Required inputs
+[Received/Incomplete/Missing] Originally submitted manuscript: <filename or needed item>
+[Received/Incomplete/Missing] Complete reviewer/editor comments: <filename or needed item>
+[Received/Incomplete/Missing] Added-experiment evidence summary with data, conditions, and results: <filename or needed item>
+
+Recommended supporting materials
+[Received/Missing/Not applicable] Supplementary Information
+[Received/Missing/Not applicable] New or revised figures, legends, tables, and source data
+[Received/Missing/Not applicable] Detailed methods, statistical outputs, and relevant references
+[Received/Missing/Not applicable] Journal decision letter and revision instructions
+[Received/Missing/Not applicable] Supervisor requirements and preferred response strategy
+[Received/Missing/Not applicable] Earlier response letters and revised manuscripts for a later revision round
+
+Drafting status
+[Ready / Blocked pending: <items>]
+```
+
+If any required input is missing or incomplete, stop after the intake message and request only the missing or incomplete material. Do not begin a provisional response. Recommended supporting materials are not hard blockers, but explain briefly how each material omission may reduce specificity, accuracy, placement confidence, or cross-document consistency. When all required inputs are usable, state that the intake gate has passed and proceed with the requested operating mode.
+
 ## Select the operating mode
 
 - **Draft response and revision map:** Use when reviewer comments and new results are supplied. Deliver a point-by-point response and a separate manuscript revision map.
