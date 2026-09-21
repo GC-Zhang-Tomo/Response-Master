@@ -1,65 +1,144 @@
-# Lab Reviewer Response
+# Response Master
 
-一个面向科研论文返修阶段的 Codex skill。它在初投稿件已经收到编辑或审稿人意见后使用，可完成：
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827.svg)](SKILL.md)
 
-1. 根据审稿意见、补充实验结果和导师要求撰写 point-by-point response；
-2. 生成可由另一模型直接执行的 manuscript revision map；
-3. 根据修改清单生成红字标记的 revised manuscript；
-4. 检查 response、修改清单和 revised manuscript 之间的一致性。
+**Response Master** is a Codex skill for scientific manuscript revision after peer review. It turns reviewer comments, new experimental results, planned changes, and supervisor instructions into a point-by-point response, an executable manuscript revision map, and an optional red-text revised manuscript.
 
-## 适用范围
+**Response Master** 是一个用于科研论文投稿后返修的 Codex skill。它能够根据审稿意见、补充实验结果、计划修改内容和导师要求，生成逐条回复、可执行的稿件修改清单，以及可选的红字修改稿。
 
-本 skill 只用于投稿后的返修阶段。它不用于投稿前润色，也不用于替审稿人撰写 peer-review report。
+> Status: demo. The workflow and formatting rules were distilled from two comparatively complete internal revision packages. Every scientific claim and numerical result must still be checked by the authors before submission.
 
-建议输入：
+## What it produces / 输出内容
 
-- 初次投稿的 manuscript；
-- 完整的 editor/reviewer comments；
-- 补充实验或分析结果，以及计划修改的内容；
-- 导师或课题组的额外要求。
+| Deliverable | Purpose |
+| --- | --- |
+| `*_point_by_point_response.docx` | Quotes every reviewer comment and drafts the corresponding response. |
+| `*_manuscript_revision_map.docx` | Specifies exactly where, why, and how each manuscript change should be made. |
+| `*_revised_red.docx` | Applies the approved map to the submitted manuscript and marks changed text in red. |
 
-默认输出：
+The revision map is designed as a handoff document. Another model should be able to apply it to the original manuscript without reconstructing the full drafting conversation.
 
-- `<short-title>_point_by_point_response.docx`
-- `<short-title>_manuscript_revision_map.docx`
-- `<short-title>_revised_red.docx`（需要实际修改稿时）
+## Workflow / 工作流
 
-## 组内格式
-
-- reviewer comment：黑色斜体；
-- `REPLY:`：蓝色、粗体；
-- response 正文：蓝色；
-- response 中引用的修改后原文：蓝色斜体；
-- revised manuscript 中新增或替换的文字：纯红色 `#FF0000`；
-- 不把计划实验表述为已完成实验，不虚构数据、统计量、图号或参考文献。
-
-详细规则见 [SKILL.md](SKILL.md) 和 [references](references)。
-
-## 安装
-
-将仓库克隆到某个项目的 `.agents/skills` 下：
-
-```powershell
-git clone <repository-url> .agents/skills/lab-reviewer-response
+```mermaid
+flowchart LR
+    A[Submitted manuscript] --> E[Evidence-aware synthesis]
+    B[Reviewer comments] --> E
+    C[New results and plans] --> E
+    D[Supervisor instructions] --> E
+    E --> F[Point-by-point response]
+    E --> G[Revision map]
+    G --> H[Red-text revised manuscript]
+    F --> I[Cross-document consistency check]
+    H --> I
 ```
 
-也可以放入个人 Codex skills 目录。重新打开项目后，Codex 应能读取 `SKILL.md` 并按描述触发该 skill。
+The skill supports three modes:
 
-## 可选脚本依赖
+1. **Draft response and revision map** — use when reviewer comments and new results are available.
+2. **Apply a revision map** — use when an approved map and the originally submitted manuscript are available.
+3. **Full revision package** — produce and cross-check all three deliverables.
 
-模板生成和结构检查脚本需要 Python 及 `python-docx`：
+## Required inputs / 建议输入
+
+- The originally submitted manuscript, including supplementary information when relevant.
+- Complete editor and reviewer comments in their original order.
+- New experimental or analytical results, even if they are still in scattered notes.
+- Proposed changes and any supervisor-specific requirements.
+
+A prewritten response and a pre-revised manuscript are not required. They are outputs of the workflow.
+
+## Lab formatting conventions / 回复与红字格式
+
+- Reviewer comments: black italic text.
+- `REPLY:`: blue and bold.
+- Response body: blue roman text.
+- Revised text quoted inside the response: blue italic text in quotation marks.
+- New or replacement text in the revised manuscript: pure red `#FF0000`.
+- Unchanged manuscript text retains its original formatting.
+
+Detailed conventions are defined in [`references/lab-style.md`](references/lab-style.md). The revision-map schema is defined in [`references/revision-map.md`](references/revision-map.md).
+
+## Evidence safeguards / 科学内容边界
+
+The skill separates supplied material into completed evidence, planned work, proposed wording, supervisor instructions, and unresolved items. It must not:
+
+- describe a planned experiment as completed;
+- invent data, sample sizes, statistics, figure numbers, locations, or citations;
+- broaden a conclusion beyond the supplied evidence;
+- silently omit a reviewer subrequest;
+- claim that a response quotation matches the manuscript without checking it.
+
+Unsupported requests should lead to a narrower claim, an explicit limitation, or an author-confirmation flag. See [`references/evidence-consistency.md`](references/evidence-consistency.md).
+
+## Installation / 安装
+
+Clone the repository into a project's `.agents/skills` directory:
+
+```powershell
+git clone https://github.com/GC-Zhang-Tomo/Response-Master.git .agents/skills/lab-reviewer-response
+```
+
+Open or restart the Codex project after installation. The skill is triggered by post-submission revision tasks that match the description in [`SKILL.md`](SKILL.md).
+
+The optional template builder and output checker require Python and `python-docx`:
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
 
-- `scripts/build_templates.py`：重新生成两个 Word 模板；
-- `scripts/check_outputs.py`：检查 response、revision map 和红字 manuscript 的基本结构与格式。
+## Example request / 使用示例
 
-## 数据边界
+```text
+Use the lab-reviewer-response skill on this revision package.
 
-本仓库只包含通用规则、空白模板和检查脚本，不包含用于提炼风格的历史论文、审稿意见、实验数据或课题组未发表内容。实际返修材料应保存在受控工作目录中，不应提交到本仓库。
+Inputs:
+- the originally submitted manuscript;
+- the complete reviewer comments;
+- our new experiments and analysis notes;
+- the PI's additional requirements.
 
-## 当前状态
+First produce a point-by-point response and a manuscript revision map.
+Do not treat planned experiments as completed. Flag every unresolved value or
+location for author confirmation. After the map is approved, apply it to the
+original manuscript and mark only changed text in red.
+```
 
-当前为 demo 版本。格式规则由两套较完整的历史返修材料提炼而来；在用于正式投稿前，仍应由作者逐项核对科学事实、数字、统计结果、图表位置和最终措辞。
+## Repository structure / 仓库结构
+
+```text
+Response-Master/
+├── SKILL.md
+├── agents/
+│   └── openai.yaml
+├── assets/
+│   ├── lab-response-template.docx
+│   └── manuscript-revision-map-template.docx
+├── references/
+│   ├── evidence-consistency.md
+│   ├── lab-style.md
+│   └── revision-map.md
+└── scripts/
+    ├── build_templates.py
+    └── check_outputs.py
+```
+
+`scripts/check_outputs.py` is a structural backstop for formatting, placeholders, and quote matching. It does not replace scientific review or rendered-page inspection.
+
+## Data and privacy / 数据与隐私
+
+This repository contains only general instructions, blank templates, and helper scripts. It does **not** contain the historical manuscripts, reviewer reports, unpublished experimental data, or response letters used to derive the style.
+
+Keep real revision packages in a controlled working directory. Do not commit confidential manuscripts or unpublished data to this repository. The supplied `.gitignore` excludes the conventional `inputs/`, `outputs/`, and `work/` directories, but users remain responsible for checking every commit.
+
+## Limitations / 当前限制
+
+- The current demo was calibrated from two internal revision packages.
+- It has not yet been validated against a large set of journals or article types.
+- Automated checks cannot establish scientific correctness.
+- Complex Word fields, Zotero citations, figures, and supplementary files still require final visual inspection.
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE). See [`NOTICE`](NOTICE) for attribution information.
