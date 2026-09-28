@@ -8,6 +8,7 @@ Record:
 
 - manuscript short title;
 - journal and revision round when known;
+- editorial decision and submission route, plus the actually reviewed version for later rounds;
 - exact baseline manuscript filename;
 - filenames containing reviewer comments and new evidence;
 - supervisor requirements;
@@ -32,6 +33,8 @@ Use the following fields for each entry:
 13. **Response linkage:** the reply paragraph and exact quotation that must match this change.
 14. **Dependencies or author confirmation:** unresolved facts, final numbering, statistical results, citations, or supervisor decisions.
 15. **Verification:** evidence checked, text inserted, response synchronized, references/fields preserved, and visual QA passed.
+
+For linked changes, reuse these fields rather than creating disconnected entries: list all affected reviewer IDs in **Reviewer source**, connect dependent entries in **Dependencies**, and record the old-to-new manuscript/SI panels alongside response-figure IDs in **Figure/table instructions**. A central-claim change must enumerate all affected sections and captions. A new experiment must account for the applicable Results, Methods, figure/SI, legend, statistics, and source-data destinations, with unavailable files explicitly unverified. In **Evidence basis**, record sample provenance, normalization, statistical units, and factual corrections when they affect interpretation. See [response-strategy.md](response-strategy.md) for the conditional checks.
 
 ## Location rules
 

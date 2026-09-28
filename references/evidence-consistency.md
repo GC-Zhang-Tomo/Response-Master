@@ -20,6 +20,7 @@ Keep unresolved items in the revision map and, during drafting, use yellow highl
 - When an experiment partly addresses a request, state the remaining limitation and narrow the manuscript claim.
 - If authors reasonably decline a requested experiment, explain the scientific or practical reason, use existing evidence carefully, and revise claims when needed.
 - Do not promise future experiments unless the authors explicitly authorize that commitment.
+- Evaluate new evidence against the actual reviewer concern: a related readout, alternative method, or representative image may address only part of the request. Do not infer a mechanism, sample equivalence, or biological independence from an assay label or from more technical observations. Apply [response-strategy.md](response-strategy.md) when these distinctions matter.
 
 ## Cross-document invariants
 
@@ -29,6 +30,8 @@ Keep unresolved items in the revision map and, during drafting, use yellow highl
 - Every added figure, table, analysis, method, statistic, and citation must appear in all necessary locations: main text or SI callout, legend, methods, source data, and response.
 - Final figure and table numbering must agree across the response, manuscript, SI, legends, and revision map.
 - Deletions and softened claims must remain visible in the revision map even though the revised manuscript uses red text mainly for inserted or replacement material.
+- Distinguish changes demonstrably present in supplied files from changes merely asserted in the response. A historical response and revised manuscript document author claims, not independent verification of raw experimental evidence.
+- Unit/species/condition corrections and authorship changes need their own provenance; do not treat them as stylistic edits or silently carry them into a new manuscript.
 
 ## Final checks
 

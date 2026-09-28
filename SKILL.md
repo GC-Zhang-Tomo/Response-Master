@@ -36,6 +36,7 @@ Recommended supporting materials
 [Received/Missing/Not applicable] New or revised figures, legends, tables, and source data
 [Received/Missing/Not applicable] Detailed methods, statistical outputs, and relevant references
 [Received/Missing/Not applicable] Journal decision letter and revision instructions
+[Received/Missing/Not applicable] Cover letter, if available
 [Received/Missing/Not applicable] Supervisor requirements and preferred response strategy
 [Received/Missing/Not applicable] Earlier response letters and revised manuscripts for a later revision round
 
@@ -59,16 +60,18 @@ Always read [lab-style.md](references/lab-style.md) and [evidence-consistency.md
 
 Read [revision-map.md](references/revision-map.md) when creating or applying a manuscript revision map.
 
+Read [response-strategy.md](references/response-strategy.md) when comments challenge the central claim, novelty, sample provenance, experimental comparability, statistics, or figure evidence, or when checking SI or a cover letter. It covers editorial context, alternative response strategies, manuscript-wide claim changes, and linked experiment/figure/method updates.
+
 Use [lab-response-template.docx](assets/lab-response-template.docx) for the response and [manuscript-revision-map-template.docx](assets/manuscript-revision-map-template.docx) for the revision map. Replace every placeholder; do not leave instructional text in a final deliverable.
 
 Use the `documents` skill for Word reading, editing, rendering, and final visual inspection. Use the PDF or spreadsheet skill only when the supplied evidence is in those formats. Preserve citation fields and use the Zotero skill when the user asks to add or verify references through Zotero.
 
 ## Build the scientific response
 
-1. Inventory the files and identify the exact revision round. Confirm which manuscript is the originally submitted baseline.
+1. Inventory the files and identify the exact revision round and editorial decision. Confirm which manuscript is the originally submitted baseline and, for later rounds, the version actually reviewed. Do not mistake possible consideration of a new submission for an invited revision.
 2. Preserve every editor and reviewer comment verbatim and in its original order. Split the work internally when one numbered comment contains several requests, but do not silently rewrite the quoted comment.
 3. Classify every supplied item as completed evidence, planned work, proposed wording, supervisor instruction, or unresolved. Do not present a plan as a completed experiment.
-4. Map every reviewer request to the available evidence, the proposed response, and any manuscript change. Address every subrequest explicitly.
+4. Map every editor/reviewer request, including general and unnumbered comments, to the available evidence, response strategy, and manuscript changes. Address every subrequest explicitly. Link repeated concerns to shared change records while keeping each reply understandable on its own.
 5. Draft each reply in this order when applicable: concise acknowledgement; direct answer; experiment or analysis performed; result; interpretation with appropriate limits; exact manuscript action and location; quoted revised text.
 6. If no manuscript change is needed, explain why and omit a forced revised-text quotation.
 7. If the evidence cannot support the requested claim, narrow the claim, state the limitation, or mark the issue for author confirmation. Never invent data, sample sizes, statistics, locations, figure numbers, citations, or completed work.
@@ -78,6 +81,8 @@ Use the `documents` skill for Word reading, editing, rendering, and final visual
 Create one entry for every manuscript-affecting reviewer request. Use stable locations based on document name, section heading, paragraph purpose, and an exact anchor phrase. Page and line numbers may be included as secondary locators but must not be the only locator.
 
 Each entry must state the operation, scientific purpose, evidence basis, exact proposed wording or content specification, figure/table implications, formatting requirements, dependencies, and the corresponding response quotation. Record deletions explicitly because red inserted text alone cannot show them.
+
+For a change to a central claim, list every affected section and figure title/legend, not just the paragraph named by the reviewer. For an added experiment, track the linked Results, Methods, figure/SI, legend, statistics, and source-data actions. Use the existing map fields to record these dependencies and the old-to-new panel mapping.
 
 The revision map is an execution specification. It must let another model modify the manuscript without rereading the entire reviewer-response drafting history.
 
@@ -99,9 +104,13 @@ After applying the map, update the response's quoted revised text from the actua
 Before delivery:
 
 - Confirm that every reviewer comment appears once and every subrequest is answered.
+- Confirm that editor comments and unnumbered/general assessments are addressed, revised central claims agree across sections, and repeated replies use consistent evidence and figure destinations.
+- Verify sample provenance, normalization basis, and what each n represents where these affect the reply. Mark unavailable SI, figures, or source data as unverified.
+- Inspect supplied SI figures/tables and reconcile shared values with Methods and replies. Check any supplied cover letter against the actual title, editorial route, major changes, and enclosed files; do not infer SI revision completeness without its baseline.
 - Confirm that every claimed experiment, analysis, value, and conclusion is supported by the supplied material.
 - Confirm that response quotations exactly match the revised manuscript when a revised manuscript is produced.
 - Confirm that every revision-map item is either applied, intentionally deferred, or marked as requiring author confirmation.
+- Compare baseline and revised text independently of red formatting; log factual changes and deletions, and check authorship/administrative edits against author instructions.
 - Search for placeholders such as `TBD`, `TODO`, `FIGX`, `Fig. XX`, `page XX`, and `line XX`.
 - Render every final DOCX and inspect every page. Reopen the files after saving when Word fields or complex formatting are present.
 - Run [check_outputs.py](scripts/check_outputs.py) as a structural backstop. Treat its quote-matching results as warnings that still require scientific and visual review.

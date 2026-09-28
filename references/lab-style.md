@@ -1,6 +1,6 @@
 # Lab response style
 
-This style was distilled from two comparatively complete internal response packages. Preserve the stable shared features below. Do not imitate grammatical errors, verbosity, or unsupported claims from an old response.
+This style was initially distilled from two internal response packages and refined using a third package with baseline and revised manuscripts. Preserve the stable shared features below. An example is not proof of acceptance, scientific correctness, or complete formatting. Do not imitate grammatical errors, verbosity, or unsupported claims from an old response.
 
 ## Page and typography
 
@@ -22,6 +22,8 @@ Use this sequence:
 6. A `REPLY:` block after each general assessment or numbered comment.
 
 Retain the journal's use of `Reviewer` versus `Referee`, its numbering, and its major/minor grouping. Do not renumber comments merely for convenience.
+
+If editor comments are supplied, extend the title and format note to include the editor and place the editor's quoted comment and reply before the reviewer blocks. Preserve separate significance-statement comments and general assessments even when unnumbered.
 
 ## Color and emphasis
 
@@ -50,7 +52,7 @@ When additional work was completed, state:
 
 Use transitions such as `To address this concern, we...`, `The results showed...`, and `In the revised manuscript, we added...` only when they describe real actions. Do not use them as empty boilerplate.
 
-When a response-only figure supports a reply, number it by reviewer and sequence, for example `Figure R1-1`. State its destination in the manuscript, such as `This figure is included as Supplementary Fig. S4 in the revised manuscript.` Keep response-only numbering distinct from final manuscript numbering.
+When a response figure supports a reply, use one unambiguous numbering convention throughout. Default to reviewer-plus-sequence numbering, for example `Figure R1-1`; preserve an existing consistent sequential convention when supplied. State its exact final manuscript/SI figure and panels, or explicitly label it as response-only if it has no manuscript destination. Keep response numbering distinct from final manuscript numbering and synchronize captions when evidence is reused.
 
 ## Exact quotation rule
 
@@ -59,5 +61,7 @@ Introduce a quotation with its stable manuscript location, for example:
 `In the revised Results section, under “...”, paragraph 2, we added the following text:`
 
 Then quote the exact final wording. Do not paraphrase the manuscript in the response quotation. If the manuscript is changed later, refresh the quotation from the revised manuscript.
+
+When only drafting a response and map, identify quotations as proposed edits in the author handoff and the output status. Do not report them as verified insertions until the manuscript has actually been revised. Preserve multi-paragraph quotations as complete blocks and check every paragraph against the destination file.
 
 If no textual change is warranted, give the scientific explanation without inventing a quotation.

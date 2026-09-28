@@ -7,7 +7,7 @@
 
 **Response Master** 是一个用于科研论文投稿后返修的 Codex skill。它能够根据审稿意见、补充实验结果、计划修改内容和导师要求，生成逐条回复、可执行的稿件修改清单，以及可选的红字修改稿。
 
-> Status: demo. The workflow and formatting rules were distilled from two comparatively complete internal revision packages. Every scientific claim and numerical result must still be checked by the authors before submission.
+> Status: demo. The workflow was initially distilled from two internal revision packages and refined using a third package containing a response, baseline/revised manuscripts, a cover letter, and revised SI. These examples are not independent scientific validation. Every claim and numerical result must still be checked by the authors before submission.
 
 ## What it produces / 输出内容
 
@@ -40,7 +40,7 @@ The skill supports three modes:
 2. **Apply a revision map** — use when an approved map and the originally submitted manuscript are available.
 3. **Full revision package** — produce and cross-check all three deliverables.
 
-## Required inputs / 建议输入
+## Required inputs / 必需输入
 
 Before drafting, the skill runs a mandatory intake gate in chat. It reports every required input as `Received`, `Incomplete`, or `Missing` and does not start the point-by-point response until all three required inputs are usable:
 
@@ -58,6 +58,7 @@ The skill also recommends, without treating them as hard blockers:
 - new or revised figures, legends, tables, and source data;
 - detailed methods, statistical outputs, and relevant references;
 - journal decision and revision instructions;
+- cover letter, if available;
 - supervisor requirements and preferred response strategy;
 - earlier response letters and revised manuscripts for later revision rounds.
 
@@ -85,6 +86,16 @@ The skill separates supplied material into completed evidence, planned work, pro
 - claim that a response quotation matches the manuscript without checking it.
 
 Unsupported requests should lead to a narrower claim, an explicit limitation, or an author-confirmation flag. See [`references/evidence-consistency.md`](references/evidence-consistency.md).
+
+## Handling substantive revision / 实质性返修
+
+The skill now distinguishes editorial submission routes, tracks recurring concerns across reviewers, and propagates changes in central claims across the title, abstract, significance statement when present, body text, and figure legends. It also checks sample provenance, dose normalization, statistical units, and linked Results/Methods/figure/SI changes. See [`references/response-strategy.md`](references/response-strategy.md).
+
+新增规则关注：回复是否真正回答质疑、核心结论是否全文同步收紧、样品制备和用途是否清楚、视野数与独立重复是否区分，以及新增实验是否同时落实到正文、方法、图表和补充材料。历史示例中的参数、科学结论和个别格式偏差不会自动成为其他论文的规则。
+
+When SI or a cover letter is supplied, the skill checks the actual figures/tables, shared numerical values and units, and consistency of the title, editorial route, and enclosure list. A revised SI alone cannot establish what changed from its previous version. Cover-letter drafting is optional and must be requested.
+
+提供 SI 和 cover letter 后，还会核对补充图表是否实际落实、正文与 SI 的数值和单位是否一致，以及投稿信中的标题、投稿性质和附件清单是否准确。Cover letter 和 SI 仍是推荐材料，不新增为第四、第五项硬性输入。
 
 ## Installation / 安装
 
@@ -144,13 +155,23 @@ Response-Master/
 ├── references/
 │   ├── evidence-consistency.md
 │   ├── lab-style.md
+│   ├── response-strategy.md
 │   └── revision-map.md
-└── scripts/
-    ├── build_templates.py
-    └── check_outputs.py
+├── scripts/
+│   ├── build_templates.py
+│   └── check_outputs.py
+└── tests/
+    └── test_check_outputs.py
 ```
 
-`scripts/check_outputs.py` is a structural backstop for formatting, placeholders, and quote matching. It does not replace scientific review or rendered-page inspection.
+`scripts/check_outputs.py` is a structural backstop for formatting, placeholders, and quote matching. It searches standalone revision quotations inside `REPLY:` sections, including multi-paragraph passages, and reports unmatched or unclosed quotations. Revised SI files can be supplied with repeated `--supplement` arguments:
+
+```powershell
+python scripts/check_outputs.py --response response.docx --revision-map revision-map.docx --revised-manuscript revised.docx --supplement revised-si.docx
+python -m unittest discover -s tests
+```
+
+Quote matching preserves case and units and normalizes whitespace only. Citation rendering can still cause a mismatch. Inline quotations, alternate reply labels, missing destination files, destination correctness, and scientific meaning require manual review. A successful exit does not certify readiness for submission or that every revision is red. The script does not replace scientific review or rendered-page inspection.
 
 ## Data and privacy / 数据与隐私
 
@@ -160,7 +181,7 @@ Keep real revision packages in a controlled working directory. Do not commit con
 
 ## Limitations / 当前限制
 
-- The current demo was calibrated from two internal revision packages.
+- The current demo draws on three internal revision packages; the added package includes revised SI and a cover letter but lacks a separate original review letter and the baseline SI. Its underlying raw data have not been independently verified.
 - It has not yet been validated against a large set of journals or article types.
 - Automated checks cannot establish scientific correctness.
 - Complex Word fields, Zotero citations, figures, and supplementary files still require final visual inspection.

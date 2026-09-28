@@ -51,8 +51,50 @@ def inspect_docx(path):
 
 
 def normalize(text):
-    text = text.replace("“", "").replace("”", "").replace('"', "")
-    return re.sub(r"\s+", " ", text).strip().lower()
+    # Preserve scientific case, units, and punctuation; normalize layout only.
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def revised_quote_blocks(ps):
+    """Find standalone quoted revision blocks inside REPLY sections.
+
+    This is a conservative heuristic, not a complete quotation parser. Inline
+    quotations and alternate reply labels still require manual inspection.
+    """
+    blocks, incomplete = [], []
+    active_reply = False
+    parts = []
+    start = None
+    closing = None
+    boundary = re.compile(r"^(?:Q\d+\s*:|(?:Reviewer|Referee)\s*#?\s*\d+|(?:Editor|Reviewer|Referee)[’']?s?\s+Comments\s*:|\d+[.)]\s)", re.I)
+    for index, p in enumerate(ps, 1):
+        text = p.text.strip()
+        if text.startswith("REPLY:") or boundary.match(text):
+            if parts:
+                incomplete.append(start)
+                parts = []
+            active_reply = text.startswith("REPLY:")
+        if not active_reply:
+            continue
+        if not parts:
+            if not text.startswith(('“', '"')):
+                continue
+            closing = '”' if text.startswith('“') else '"'
+            start = index
+            text = text[1:]
+        candidate = text.rstrip()
+        # Accept a closing quotation followed by a terminal period.
+        if candidate.endswith(closing + '.'):
+            candidate = candidate[:-1]
+        if candidate.endswith(closing):
+            parts.append(candidate[:-1])
+            blocks.append({"paragraph": start, "text": "\n".join(parts)})
+            parts = []
+        else:
+            parts.append(text)
+    if parts:
+        incomplete.append(start)
+    return blocks, incomplete
 
 
 def main():
@@ -60,10 +102,14 @@ def main():
     parser.add_argument("--response", type=Path)
     parser.add_argument("--revision-map", dest="revision_map", type=Path)
     parser.add_argument("--revised-manuscript", dest="revised", type=Path)
+    parser.add_argument("--supplement", type=Path, action="append", default=[],
+                        help="revised SI DOCX to search for quotes; may be repeated")
     args = parser.parse_args()
 
     if not any((args.response, args.revision_map, args.revised)):
         parser.error("provide at least one DOCX")
+    if args.supplement and not args.revised:
+        parser.error("--supplement requires --revised-manuscript")
 
     report = {"errors": [], "warnings": [], "files": {}}
 
@@ -123,18 +169,28 @@ def main():
             report["errors"].append(f"revised-manuscript placeholders remain: {hits}")
 
         if response_info:
-            manuscript_text = normalize(revised_info["text"])
-            quoted = []
-            for p in response_info["paragraphs"]:
-                stripped = p.text.strip()
-                if stripped.startswith(("“", '"')) and len(normalize(stripped)) >= 40:
-                    quoted.append(stripped)
-            for quote in quoted:
-                if normalize(quote) not in manuscript_text:
+            destinations = {str(args.revised): normalize(revised_info["text"])}
+            for path in args.supplement:
+                destinations[str(path)] = normalize(inspect_docx(path)["text"])
+            report["files"]["supplements"] = [str(p) for p in args.supplement]
+            quoted, incomplete = revised_quote_blocks(response_info["paragraphs"])
+            report["quote_checks"] = []
+            for block in quoted:
+                quote = normalize(block["text"])
+                matches = [path for path, text in destinations.items() if quote and quote in text]
+                report["quote_checks"].append({"paragraph": block["paragraph"], "matched_files": matches})
+                if not matches:
                     report["warnings"].append(
-                        "quoted revised text was not found verbatim in the revised manuscript: "
+                        f"quoted revision at response paragraph {block['paragraph']} was not found "
+                        "verbatim in supplied revised files; inspect wording, citations, and destination: "
                         + quote[:160]
                     )
+            for paragraph in incomplete:
+                report["warnings"].append(f"unclosed revision quotation at response paragraph {paragraph}")
+            report["warnings"].append(
+                "quote search is heuristic: manually check inline quotations, alternate reply labels, "
+                "destination accuracy, and any SI not supplied; script success is not submission clearance"
+            )
 
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 1 if report["errors"] else 0
