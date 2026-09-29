@@ -52,6 +52,14 @@ When additional work was completed, state:
 
 Use transitions such as `To address this concern, we...`, `The results showed...`, and `In the revised manuscript, we added...` only when they describe real actions. Do not use them as empty boilerplate.
 
+### Persuasive framing from the authors' perspective
+
+The reply should make the strongest accurate case for the authors' work. After the courteous opening, foreground the direct answer and strongest relevant evidence, explain why it addresses the reviewer's concern, and use complementary findings to reinforce that argument. Emphasize demonstrated strengths rather than routinely opening with what the study lacks. Acknowledging the importance of a concern does not mean agreeing that the data are inadequate or that the requested experiment is the only valid answer.
+
+Keep the internal critical assessment and the reviewer-facing reply distinct. Put speculative weaknesses, nonessential extensions, and optional validation in the author handoff when useful. Do not volunteer unrelated shortcomings, list every conceivable alternative, or end each result with `we cannot exclude ...` / `this does not establish ...` by default. A supported scope statement such as `These results support X under the tested conditions` can convey the appropriate boundary without first asserting that the experiment fails to prove a broader, unclaimed Y.
+
+Include a limitation when the reviewer asks about it directly or when omitting it would materially misrepresent the evidence. Address it briefly and specifically, explain any supported mitigation or complementary evidence, and return to what the findings do establish. Do not hide contradictions or use positive framing to sidestep an unanswered central concern. Where the evidence warrants it, close with the shared answer and its relevance rather than an unnecessary final concession. No fixed quota of positive sentences or caveats is needed.
+
 ### Organize by the reviewer's concerns
 
 Preserve the reviewer's labels and hierarchy when provided. For an unnumbered complex comment, identify the main concern groups before assigning reply numbers. Match the visible top-level reply points to those groups and keep their order. Several experiments, an explanation, and a necessary caveat can all belong to one point. Use subordinate paragraphs or sublabels only where they improve clarity; a simple comment needs no forced numbered list.

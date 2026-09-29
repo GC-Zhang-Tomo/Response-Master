@@ -9,6 +9,8 @@ Use this skill for a returned manuscript revision. The normal inputs are the ori
 
 The user's instructions and the current manuscript evidence control the scientific content. The included templates control the lab's response and revision-map presentation. Aim for a courteous, persuasive, evidence-supported answer to the reviewer's actual concerns. Select the key results needed for that answer; do not turn a revision into a demand for an exhaustive new study.
 
+Write from the authors' perspective: make the strongest accurate case for how their results address the concern. Lead with relevant strengths, foreground the most convincing evidence, and explain its significance. Keep rigorous internal evidence assessment separate from the reviewer-facing narrative; do not export an internal list of weaknesses into every reply. Use concessions only when needed to answer an explicit concern or avoid a materially misleading inference, and keep them specific and proportionate. See the persuasive-framing guidance in [lab-style.md](references/lab-style.md).
+
 ## Run the mandatory intake gate
 
 At the first activation for every new revision package, respond in chat with an input checklist before drafting any response text or creating any deliverable. Match the user's language. Inventory the supplied files and label each required item `Received`, `Incomplete`, or `Missing`.
@@ -112,6 +114,7 @@ Before delivery:
 - Confirm that every reviewer comment appears once and every subrequest is answered.
 - Compare each complex reply's top-level headings with the reviewer's concern groups and order. Check for a missing label, a duplicated concern, or a paragraph that returns to an earlier group after another group has begun.
 - Confirm a courteous opening, clear roles and transitions for parallel evidence, and a shared conclusion that answers the concern within the evidence's scope. Keep optional experimental advice in the author handoff; retain material limitations and do not imply unapproved commitments.
+- Review concession sentences: keep those necessary for the actual concern or accuracy, remove generic self-undermining caveats, and consolidate repeated limitations. Ensure the reply clearly states the evidence's strengths and their relevance, without declaring a concern resolved when a central gap remains.
 - Confirm that supplied response drafts and pre-revised manuscripts were considered, their version roles recorded, and useful existing work preserved without treating draft assertions as verified data.
 - Confirm that editor comments and unnumbered/general assessments are addressed, revised central claims agree across sections, and repeated replies use consistent evidence and figure destinations.
 - Verify sample provenance, normalization basis, and what each n represents where these affect the reply. Mark unavailable SI, figures, or source data as unverified.

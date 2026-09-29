@@ -77,6 +77,8 @@ A prewritten response and a pre-revised manuscript are optional, valuable refere
 
 回复目标是用可信、针对性的证据回应审稿人的核心疑虑。分点跟随问题的逻辑，多项实验围绕共同回答衔接；真正影响结论的缺口仍需指出，额外完善建议留给作者选择。
 
+写作立场是帮助作者有理有据地说服审稿人：突出优势、关键证据及其对 concern 的回应，避免反复主动承认与当前问题无关的不足。内部证据审查与对外 reply 分开；只保留直接涉及审稿问题或影响解释真实性的必要限制，并简洁说明，不让泛泛的自我否定主导回复。
+
 ## Lab formatting conventions / 回复与红字格式
 
 - Reviewer comments: black italic text.
