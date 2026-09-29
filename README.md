@@ -48,12 +48,14 @@ Before drafting, the skill runs a mandatory intake gate in chat. It reports ever
 2. The complete reviewer comments, with the editor decision letter when available.
 3. A coherent added-experiment evidence summary containing the concrete data, experimental conditions, and results intended to answer the reviewers.
 
-The evidence summary should identify the linked reviewer concern, experiment or analysis, samples and groups, conditions and controls, replicates or sample size, statistical method and values, result, source figure or table, interpretation, limitations, and completed-versus-planned status wherever those fields apply.
+The evidence summary must link concerns to completed/planned work, essential conditions, observed results, and their sources. Controls, sample sizes, and statistics are needed where they determine the interpretation of a key result or proposed claim. Usability is judged against the targeted reviewer concern, not an exhaustive new-study checklist. A current response draft may serve as the summary file when it contains the needed evidence information; its scientific assertions still need checking. A concern answered through existing evidence or clarification does not automatically require a new experiment.
 
-首次为一个返修项目调用本 Skill 时，Codex 必须先在聊天中输出材料检查清单。初次投稿稿件、完整审稿意见以及包含具体数据、实验条件和结果的补充实验汇总文件，三者缺一时不得开始撰写 response。
+首次为一个返修项目调用本 Skill 时，Codex 必须先在聊天中输出材料检查清单。送审稿件、完整审稿意见以及可用的证据汇总信息三项齐备后开始撰写 response。已有 response 草稿若已包含所需数据、关键条件和结果，可作为证据汇总文件；不因缺少与核心回复无关的完善材料而阻止起草。
 
 The skill also recommends, without treating them as hard blockers:
 
+- an author-written response draft or partial replies for the current round, including the first revision;
+- a manuscript already revised against that draft, with revised SI/figures and tracked or red edits if available;
 - Supplementary Information;
 - new or revised figures, legends, tables, and source data;
 - detailed methods, statistical outputs, and relevant references;
@@ -62,7 +64,18 @@ The skill also recommends, without treating them as hard blockers:
 - supervisor requirements and preferred response strategy;
 - earlier response letters and revised manuscripts for later revision rounds.
 
-A prewritten response and a pre-revised manuscript are not required. They are outputs of the workflow.
+A prewritten response and a pre-revised manuscript are optional, valuable references. The first checklist explicitly invites users to upload them or place them in the project folder. The skill preserves useful arguments and existing edits after verification, distinguishes the reviewed baseline from the working revision, and avoids losing or applying changes twice.
+
+如果已经人工写过 response 初稿、部分回复，或已据此修改 manuscript，请一并上传或放入项目文件夹，并注明版本关系。首轮返修同样适用；这些是推荐参考材料，不是新增的必需文件。请同时保留送审原稿，以便核对本轮全部修改。
+
+## Reply quality / 回复质量
+
+- Begin substantive replies with brief, context-specific thanks or appreciation before the direct answer; courteous disagreement does not require conceding the reviewer's interpretation.
+- Organize complex replies around the reviewer's concern groups and order. Several experiments or a result and its limitation can belong under one point.
+- Use key evidence to answer the actual concern. Separate essential gaps from optional strengthening; do not demand comprehensive new experiments merely for completeness.
+- Explain how parallel experiments complement one another and end with a bounded shared conclusion. Keep material limitations, without turning every result into a list of what it cannot prove.
+
+回复目标是用可信、针对性的证据回应审稿人的核心疑虑。分点跟随问题的逻辑，多项实验围绕共同回答衔接；真正影响结论的缺口仍需指出，额外完善建议留给作者选择。
 
 ## Lab formatting conventions / 回复与红字格式
 
@@ -85,7 +98,7 @@ The skill separates supplied material into completed evidence, planned work, pro
 - silently omit a reviewer subrequest;
 - claim that a response quotation matches the manuscript without checking it.
 
-Unsupported requests should lead to a narrower claim, an explicit limitation, or an author-confirmation flag. See [`references/evidence-consistency.md`](references/evidence-consistency.md).
+Claims unsupported by the combined evidence should lead to an appropriately narrower claim, a material limitation, a reasoned alternative, or an author-confirmation flag. Useful but nonessential experiments remain optional author-facing advice. See [`references/evidence-consistency.md`](references/evidence-consistency.md).
 
 ## Handling substantive revision / 实质性返修
 
@@ -118,6 +131,22 @@ added-experiment evidence summary are all present and usable.
 
 Installing a local skill does not itself send a chat message. The checklist appears when the skill is first invoked for a revision package.
 
+### Updating an installed copy / 更新已安装副本
+
+Publishing this repository does not update copies already cloned or downloaded onto other computers. This repository includes no automatic GitHub updater. For the project-local clone above, run from the project directory:
+
+```powershell
+git -C .agents/skills/lab-reviewer-response status --short
+git -C .agents/skills/lab-reviewer-response pull --ff-only origin main
+git -C .agents/skills/lab-reviewer-response log -1 --oneline
+```
+
+Inspect and preserve local modifications before pulling. If the installed folder was copied or downloaded without its own `.git`, back it up and replace the skill files from the current repository instead; do not run Git against an enclosing project by mistake. Use the actual installation path if different from the example.
+
+Codex detects changes to local skill files automatically; if the updated skill does not appear, restart Codex ([official documentation](https://learn.chatgpt.com/docs/build-skills)). This local detection does not fetch new commits from GitHub. In an existing conversation that already read an older skill, explicitly ask it to reread the updated skill and relevant references before continuing.
+
+同学可以直接对 agent 说：“请从 GC-Zhang-Tomo/Response-Master 更新本项目安装的 lab-reviewer-response，保留本地修改，核对版本，然后重新读取新版 SKILL.md 和相关 references。”只有实际更新了本地文件，才会用到发布的新规则；每次调用不会自动拉取 GitHub 最新版。
+
 The optional template builder and output checker require Python and `python-docx`:
 
 ```powershell
@@ -133,6 +162,8 @@ Inputs:
 - the originally submitted manuscript;
 - the complete reviewer comments;
 - our added-experiment evidence summary with concrete data, conditions, and results;
+- our response draft and the manuscript already revised against it, if available
+  (please preserve useful existing work and distinguish these from the reviewed baseline);
 - the PI's additional requirements.
 
 First show the mandatory intake checklist in chat. When all required inputs pass,

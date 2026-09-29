@@ -39,18 +39,30 @@ The response quotation is blue italic because it is part of the authors' reply. 
 
 ## Reply composition
 
-Start with one concise acknowledgement when natural, then answer the scientific point directly. Avoid stacking generic thanks before the answer. Prefer `the reviewer` over gendered pronouns.
+Open each substantive reply with one concise, courteous acknowledgement tied to the comment, then answer the scientific point directly. This also applies to disagreement or a correction. For example: `We thank the reviewer for raising this concern about ...`, `We appreciate the opportunity to clarify ...`, or, for a specific suggestion, `We thank the reviewer for this helpful suggestion.` Adapt the wording to the actual comment; appreciation need not imply agreement. Do not begin abruptly with a verdict or routinely concede that the authors' work is inadequate. Avoid exaggerated praise, repeated identical openings, and additional thanks before every supporting experiment. Prefer `the reviewer` over gendered pronouns. If a reviewer has no further comments, acknowledge that without inventing a favorable assessment.
 
 When additional work was completed, state:
 
 1. what was done;
 2. which samples, conditions, or analysis were used;
 3. the result, including quantitative values when supplied;
-4. what the result supports and what it does not establish;
+4. how the result supports the answer, with a limitation only where it materially affects that inference;
 5. where the material was added to the manuscript;
 6. the exact revised text.
 
 Use transitions such as `To address this concern, we...`, `The results showed...`, and `In the revised manuscript, we added...` only when they describe real actions. Do not use them as empty boilerplate.
+
+### Organize by the reviewer's concerns
+
+Preserve the reviewer's labels and hierarchy when provided. For an unnumbered complex comment, identify the main concern groups before assigning reply numbers. Match the visible top-level reply points to those groups and keep their order. Several experiments, an explanation, and a necessary caveat can all belong to one point. Use subordinate paragraphs or sublabels only where they improve clarity; a simple comment needs no forced numbered list.
+
+For example, a comment with two main concerns about structural characterization and tissue localization should receive `(1) Structural characterization` and `(2) Tissue localization`. The contribution and limits of the structural result belong together inside point 1. Do not number those two paragraphs as points 1 and 2 while leaving the tissue-localization answer unnumbered. Finish the structural discussion before moving to tissue localization. If other explicit requests occur in the same comment, retain them as mapped subrequests or identified cross-references; do not discard them to fit an example's two-point outline.
+
+### Connect parallel experiments
+
+Give the answer or common question first, then introduce each result by its role: what uncertainty it addresses and how it complements the preceding evidence. A controlled assay, a tissue experiment, and an imaging observation may provide different forms of support for the same concern; do not present them as interchangeable or as a causal sequence. Use `Consistent with this observation` only for genuinely concordant findings and `To examine this in tissue` only when that accurately describes the next experiment. End with a short synthesis explaining what the combined results support under the tested conditions. For conflicting findings, explain the difference instead of forcing agreement.
+
+Place a material limitation at the relevant inference or in the synthesis. Avoid ending every experiment with a generic `does not prove ...` disclaimer and leaving the shared answer unstated. Put optional follow-up experiments in the author-facing recommendations, not among completed results or as unsolicited promises to the reviewer.
 
 When a response figure supports a reply, use one unambiguous numbering convention throughout. Default to reviewer-plus-sequence numbering, for example `Figure R1-1`; preserve an existing consistent sequential convention when supplied. State its exact final manuscript/SI figure and panels, or explicitly label it as response-only if it has no manuscript destination. Keep response numbering distinct from final manuscript numbering and synchronize captions when evidence is reused.
 

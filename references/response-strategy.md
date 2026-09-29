@@ -1,6 +1,14 @@
 # Response strategy and manuscript-wide revision
 
-Use this guidance when comments question the central claim, novelty, comparability of experiments, sample preparation, statistics, or figure evidence. Historical examples demonstrate response strategies, not verified scientific facts or universal experimental protocols.
+Use this guidance for complex comments, parallel supporting experiments, or questions about the central claim, novelty, comparability of experiments, sample preparation, statistics, or figure evidence. Historical examples demonstrate response strategies, not verified scientific facts or universal experimental protocols. Apply the detailed checks below where they affect the intended answer; they are not a universal list of new experiments to demand.
+
+## Plan the concern-to-answer structure
+
+Before writing a complex reply, make a compact internal mapping: original concern/subrequest → direct answer → key supporting result(s) → necessary boundary → manuscript action. Preserve explicit reviewer numbering. For an unnumbered comment, group its concerns by meaning and order before choosing headings. Keep contributions, controls, explanations, and limitations of the same topic within that topic. A result is evidence for a concern, not automatically a new top-level reply point.
+
+Distinguish a general statement of the same concerns elaborated below from an additional request. A general reply may give an overview and point to fully identified later replies, but must not leave an independent request unanswered. Inspect the completed reply for topic switching, duplicate headings, and a final unnumbered answer that should have been a peer of numbered points.
+
+When several experiments answer one concern, choose their order by their contribution to the argument: establish the direct result, connect complementary evidence, and state their combined implication. Do not merely concatenate assay summaries or claim one experiment proves what only another measures. Different modalities need not have identical endpoints to contribute to a bounded answer. Explain the actual bridge between them. If results disagree or depend on different conditions, preserve that distinction in the synthesis.
 
 ## Understand the editorial decision
 
@@ -15,11 +23,13 @@ When a cover letter is supplied, check the current title, prior manuscript ident
 For each concern, decide whether the appropriate action is a factual correction, clarification of existing work, new experiment or analysis, narrower conclusion, or reasoned disagreement. Several actions may be needed for one question.
 
 - Identify the reviewer's underlying uncertainty, including an alternative explanation the original design did not exclude.
-- State what each available control or complementary method addresses and what remains unresolved. Multiple methods do not automatically prove a stronger claim than their combined scope permits.
-- If using an alternative to the requested method, explain why it addresses the same concern and disclose its limitations; naming the alternative alone is not an answer.
+- State the positive contribution of each selected control or complementary method and synthesize their joint support. Discuss unresolved issues that materially affect the answer; do not list unrelated limitations of every assay. Multiple methods do not automatically prove a stronger claim than their combined scope permits.
+- If using an alternative to the requested method, identify the scientific criterion behind the request and explain which supplied findings meet it. Distinguish a technique preference from a criterion that the alternative genuinely cannot assess. Give a brief material boundary or reasoned disagreement where needed; naming the alternative alone is not an answer, and unavailable equipment alone does not establish adequacy.
 - If a reviewer misread an ambiguous method, acknowledge the ambiguity, establish the correct account from records, and put the clarification into the manuscript where readers need it.
 - Acknowledging prior work should lead to an accurate account of the remaining contribution. Do not invent a new novelty claim or dismiss relevant prior studies.
 - When several reviewers raise the same issue, link them to one change/evidence record. Give a short direct answer in each reply and cross-reference a fully identified reviewer/comment for detail. Do not answer only with “see above.”
+
+Prefer the smallest evidence-supported response that resolves the concern. Before recommending another experiment, identify the unanswered inference and check whether existing results, a clearer explanation, or a narrower claim already resolve it. Keep optional validation in author-facing advice. Do not write `we would perform`, `we will add`, or a commitment to withdraw a claim unless the authors authorized that action; distinguish a proposed edit from a confirmed change. If the reviewer explicitly requests something unavailable, answer that request with the supported alternative, scope boundary, or author-approved plan.
 
 ## Propagate changes in claims
 
@@ -43,7 +53,7 @@ For every quantitative panel, identify what one point represents, the reported n
 
 An increased number of images, fields, particles, or cells is not automatically an increased number of independent biological replicates. If the hierarchy is unclear, flag the inference and request the design information; do not invent independence or choose a new test without an adequate design basis.
 
-A representative image or blot can support a qualitative observation but does not replace missing replicate quantification. If a quantitative panel is removed or replaced, explain how the revised evidence addresses the original concern and what remains unanswered.
+A representative image or blot can support a qualitative observation. Require replicate quantification when the answer relies on a quantitative comparison, reproducibility claim, or an explicit request for it; do not demand it for every illustrative clarification. If a quantitative panel is removed or replaced, explain how the revised evidence addresses the original concern and any material gap that remains.
 
 ## Close figure and method changes
 

@@ -10,6 +10,7 @@ Record:
 - journal and revision round when known;
 - editorial decision and submission route, plus the actually reviewed version for later rounds;
 - exact baseline manuscript filename;
+- current author response draft and already revised manuscript filenames, when supplied, plus the working copy selected for continued editing;
 - filenames containing reviewer comments and new evidence;
 - supervisor requirements;
 - date and revision-map status: draft, author-confirmed, or applied.
@@ -36,6 +37,10 @@ Use the following fields for each entry:
 
 For linked changes, reuse these fields rather than creating disconnected entries: list all affected reviewer IDs in **Reviewer source**, connect dependent entries in **Dependencies**, and record the old-to-new manuscript/SI panels alongside response-figure IDs in **Figure/table instructions**. A central-claim change must enumerate all affected sections and captions. A new experiment must account for the applicable Results, Methods, figure/SI, legend, statistics, and source-data destinations, with unavailable files explicitly unverified. In **Evidence basis**, record sample provenance, normalization, statistical units, and factual corrections when they affect interpretation. See [response-strategy.md](response-strategy.md) for the conditional checks.
 
+In **Reviewer concern**, retain the main concern and subrequest relationship used in the reply. Multiple experiments may support one answer; separate executable edits do not require separate top-level reply points. In **Dependencies or author confirmation**, distinguish an essential gap from optional strengthening. Keep optional experiments outside the required execution map unless the user elects to include them.
+
+For an already revised working manuscript, compare it with the reviewed baseline and label relevant changes as already present, needing adjustment, or still to apply. Carry forward verified edits and refresh the response's quotations from the selected working version. Record discrepancies between a draft's claimed changes and the actual files rather than assuming either version is correct. In the template, expand the baseline metadata to record both the reviewed baseline and the editing copy; the evidence-input field can list the response draft.
+
 ## Location rules
 
 Prefer locators such as:
@@ -56,4 +61,4 @@ Avoid instructions such as `add near page 6`. Pagination can change during revis
 
 ## Handoff gate
 
-Before using the map to edit a manuscript, verify that the supplied manuscript matches the baseline filename and scientific version recorded in the map. Stop and reconcile version differences if section headings, anchor phrases, figures, or key claims do not match.
+Before using the map to edit a manuscript, verify that the editing copy matches the working filename and scientific version recorded in the map (the reviewed baseline by default, or a clearly identified author revision). Keep the reviewed baseline as the comparison reference for all retained red changes. Stop and reconcile unexpected version differences if section headings, anchor phrases, figures, or key claims do not match. Do not reapply an edit already present.

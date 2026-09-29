@@ -1,6 +1,6 @@
 interface:
   display_name: "Lab Reviewer Response"
   short_description: "Draft reviewer responses and manuscript revision maps"
-  default_prompt: "Use $lab-reviewer-response for this returned manuscript package. Start by showing the mandatory chat intake checklist. Do not draft the response until the originally submitted manuscript, complete reviewer comments, and an added-experiment evidence summary containing concrete data, conditions, and results are all present and usable."
+  default_prompt: "Use $lab-reviewer-response for this returned manuscript package: first check the required inputs and invite any existing response draft or revised manuscript, then prepare courteous replies organized by reviewer concern using targeted evidence."
 policy:
   allow_implicit_invocation: true

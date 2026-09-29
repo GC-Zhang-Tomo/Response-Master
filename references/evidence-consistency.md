@@ -14,20 +14,30 @@ Keep unresolved items in the revision map and, during drafting, use yellow highl
 
 ## Claim calibration
 
+Judge sufficiency relative to the actual concern and the claim needed to answer it. The aim is to make a convincing, truthful revision response with targeted evidence, not to require every supplementary result to establish a complete mechanism, exclude every conceivable alternative, or support a new paper on its own.
+
+For each concern, separate:
+
+- **Usable support:** existing or new evidence that supports a bounded direct answer, alone or together with complementary results. Explain its positive contribution.
+- **Essential gap:** a missing fact, contradiction, or unaddressed explicit request that prevents the proposed answer from holding. State exactly which inference fails and seek the smallest clarification, analysis, claim adjustment, or reasoned alternative needed. An explicit experiment request must be answered, but does not automatically oblige the authors to perform that experiment.
+- **Optional strengthening:** broader validation or additional experiments that would be useful but are unnecessary for the bounded answer. Keep these optional and author-facing; do not make them intake or submission blockers merely for completeness.
+
+An honest limitation does not invalidate the positive evidence. Include it in the reply when it changes the interpretation or is itself the reviewer's concern. Do not invent a stronger claim just to reject the supplied result for failing to prove it. Conversely, persuasion cannot justify concealing contradictory data, dismissing a central unresolved concern, or reporting planned work as completed.
+
 - Match causal language to causal evidence.
 - Distinguish direct experimental results from interpretation and speculation.
 - Report sample sizes, replicates, conditions, statistical tests, exact values, and figure destinations only when supplied or verifiable.
-- When an experiment partly addresses a request, state the remaining limitation and narrow the manuscript claim.
+- When an experiment addresses only part of a request, first check whether the other supplied evidence or a clarification addresses the rest. If a material gap remains, state it and narrow only the claim that exceeds the combined evidence.
 - If authors reasonably decline a requested experiment, explain the scientific or practical reason, use existing evidence carefully, and revise claims when needed.
 - Do not promise future experiments unless the authors explicitly authorize that commitment.
-- Evaluate new evidence against the actual reviewer concern: a related readout, alternative method, or representative image may address only part of the request. Do not infer a mechanism, sample equivalence, or biological independence from an assay label or from more technical observations. Apply [response-strategy.md](response-strategy.md) when these distinctions matter.
+- Evaluate new evidence against the actual reviewer concern: a related readout, alternative method, or representative image may be sufficient for a qualitative or bounded request but insufficient for a specific quantitative or mechanistic claim. Explain the connection rather than rejecting an alternative simply because it is not the requested technique. Do not infer a mechanism, sample equivalence, or biological independence from an assay label or from more technical observations. Apply [response-strategy.md](response-strategy.md) when these distinctions matter.
 
 ## Cross-document invariants
 
 - Every reviewer request must have one identifiable response.
 - Every response claim that the manuscript was changed must map to a revision-map entry.
 - Every quoted revised passage must exactly match the final revised manuscript.
-- Every added figure, table, analysis, method, statistic, and citation must appear in all necessary locations: main text or SI callout, legend, methods, source data, and response.
+- Every added item must have consistent information in its applicable destinations: main text or SI callout, legend, methods, source data, and response. This is a consistency check on material being used, not a requirement to generate every category of artifact or additional experiments for every reply. Response-only evidence may remain response-only when appropriate and clearly labeled.
 - Final figure and table numbering must agree across the response, manuscript, SI, legends, and revision map.
 - Deletions and softened claims must remain visible in the revision map even though the revised manuscript uses red text mainly for inserted or replacement material.
 - Distinguish changes demonstrably present in supplied files from changes merely asserted in the response. A historical response and revised manuscript document author claims, not independent verification of raw experimental evidence.

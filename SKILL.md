@@ -7,7 +7,7 @@ description: Draft post-submission point-by-point reviewer responses, produce an
 
 Use this skill for a returned manuscript revision. The normal inputs are the originally submitted manuscript, the complete editor and reviewer comments, scattered new experimental or analytical results and proposed changes, and any supervisor instructions.
 
-The user's instructions and the current manuscript evidence control the scientific content. The included templates control the lab's response and revision-map presentation.
+The user's instructions and the current manuscript evidence control the scientific content. The included templates control the lab's response and revision-map presentation. Aim for a courteous, persuasive, evidence-supported answer to the reviewer's actual concerns. Select the key results needed for that answer; do not turn a revision into a demand for an exhaustive new study.
 
 ## Run the mandatory intake gate
 
@@ -19,7 +19,7 @@ Do not draft the point-by-point response until all three required inputs are pre
 2. **Complete editor and reviewer comments:** the decision letter and all reviewer comments in their original order. Reviewer comments are mandatory even when the decision letter is unavailable.
 3. **Added-experiment evidence summary:** a coherent file that records the concrete data, experimental conditions, and result summary intended to answer the reviewers. Supporting figures, tables, spreadsheets, or raw-output files may accompany it, but they do not replace the summary file.
 
-Treat the added-experiment evidence summary as incomplete unless it identifies, where applicable, the linked reviewer concern, experiment or analysis performed, samples and groups, conditions and controls, sample size or replicate information, statistical method and values, quantitative or qualitative result, source figure or table, interpretation, limitations, and whether each item is completed or only planned. Do not demand fields that genuinely do not apply, but call out material omissions.
+Judge whether the evidence summary is usable for the intended replies: it must identify the concern addressed, what was done and under what essential conditions, the observed result and its source, and completed-versus-planned status. Request controls, sample sizes, statistics, or other details when their absence prevents interpreting a key result or supporting a proposed claim. Do not mark the package incomplete merely because it lacks a comprehensive experimental program or details irrelevant to that claim. A qualitative clarification does not automatically require new quantification. A supplied current-round response draft may serve as the summary file if it contains the necessary evidence information; its assertions alone do not verify the experiments. For concerns needing no new experiment, record the existing evidence or clarification and why it addresses the concern.
 
 Use this chat intake structure:
 
@@ -32,6 +32,8 @@ Required inputs
 [Received/Incomplete/Missing] Added-experiment evidence summary with data, conditions, and results: <filename or needed item>
 
 Recommended supporting materials
+[Received/Missing/Not applicable] Author-written response draft or partial replies for this round (including the first revision)
+[Received/Missing/Not applicable] Manuscript already revised against that draft, with SI/figures and tracked/red edits if available
 [Received/Missing/Not applicable] Supplementary Information
 [Received/Missing/Not applicable] New or revised figures, legends, tables, and source data
 [Received/Missing/Not applicable] Detailed methods, statistical outputs, and relevant references
@@ -42,9 +44,13 @@ Recommended supporting materials
 
 Drafting status
 [Ready / Blocked pending: <items>]
+
+If you already have a response draft or a manuscript revised against it, please
+upload them or place them in the project folder for reference. They are optional;
+please also identify the originally reviewed manuscript and each draft's version.
 ```
 
-If any required input is missing or incomplete, stop after the intake message and request only the missing or incomplete material. Do not begin a provisional response. Recommended supporting materials are not hard blockers, but explain briefly how each material omission may reduce specificity, accuracy, placement confidence, or cross-document consistency. When all required inputs are usable, state that the intake gate has passed and proceed with the requested operating mode.
+If any required input is missing or materially incomplete under the criteria above, stop after the intake message and request only the missing or incomplete material. Do not begin a provisional response. Recommended supporting materials are not hard blockers; mention the consequence of an absence only when it affects the requested output. When all required inputs are usable, state that the intake gate has passed and proceed with the requested operating mode.
 
 ## Select the operating mode
 
@@ -52,7 +58,7 @@ If any required input is missing or incomplete, stop after the intake message an
 - **Apply a revision map:** Use when a manuscript and an existing revision map are supplied. Produce a revised manuscript in which every changed textual fragment is red.
 - **Full revision package:** Use when all inputs are available and the user asks for the complete workflow. Produce all three deliverables and cross-check them together.
 
-Do not require a prewritten response or a pre-revised manuscript. Those are outputs of this workflow.
+Do not require a prewritten response or a pre-revised manuscript, but actively use them when available. Preserve useful author arguments, wording, and completed edits after checking them against reviewer comments and evidence. Record the reviewed baseline, current response draft, and current working manuscript separately; do not mistake an author's revision for the reviewed baseline. Before further edits, reconcile existing changes with the revision map so they are neither lost nor applied twice.
 
 ## Read the relevant guidance
 
@@ -60,7 +66,7 @@ Always read [lab-style.md](references/lab-style.md) and [evidence-consistency.md
 
 Read [revision-map.md](references/revision-map.md) when creating or applying a manuscript revision map.
 
-Read [response-strategy.md](references/response-strategy.md) when comments challenge the central claim, novelty, sample provenance, experimental comparability, statistics, or figure evidence, or when checking SI or a cover letter. It covers editorial context, alternative response strategies, manuscript-wide claim changes, and linked experiment/figure/method updates.
+Read [response-strategy.md](references/response-strategy.md) when a comment has multiple concerns or uses parallel experiments, when it challenges the central claim, novelty, sample provenance, experimental comparability, statistics, or figure evidence, or when checking SI or a cover letter. It covers concern mapping, evidence synthesis, editorial context, alternative response strategies, manuscript-wide claim changes, and linked experiment/figure/method updates.
 
 Use [lab-response-template.docx](assets/lab-response-template.docx) for the response and [manuscript-revision-map-template.docx](assets/manuscript-revision-map-template.docx) for the revision map. Replace every placeholder; do not leave instructional text in a final deliverable.
 
@@ -69,12 +75,12 @@ Use the `documents` skill for Word reading, editing, rendering, and final visual
 ## Build the scientific response
 
 1. Inventory the files and identify the exact revision round and editorial decision. Confirm which manuscript is the originally submitted baseline and, for later rounds, the version actually reviewed. Do not mistake possible consideration of a new submission for an invited revision.
-2. Preserve every editor and reviewer comment verbatim and in its original order. Split the work internally when one numbered comment contains several requests, but do not silently rewrite the quoted comment.
+2. Preserve every editor and reviewer comment verbatim and in its original order. Before drafting a complex reply, map the comment's main concerns and subordinate requests. Use the reviewer's explicit labels/order when present; otherwise infer coherent concern groups from the comment. Reply headings must reflect those groups, not the number of experiments or paragraphs. Keep multiple supporting results under their shared concern and do not silently rewrite the quoted comment.
 3. Classify every supplied item as completed evidence, planned work, proposed wording, supervisor instruction, or unresolved. Do not present a plan as a completed experiment.
 4. Map every editor/reviewer request, including general and unnumbered comments, to the available evidence, response strategy, and manuscript changes. Address every subrequest explicitly. Link repeated concerns to shared change records while keeping each reply understandable on its own.
-5. Draft each reply in this order when applicable: concise acknowledgement; direct answer; experiment or analysis performed; result; interpretation with appropriate limits; exact manuscript action and location; quoted revised text.
+5. Start each substantive reply with a brief, context-specific expression of thanks or appreciation, including replies that disagree. Then give the direct answer, selected supporting results, and their combined implication for the concern, followed by applicable manuscript actions, locations, and exact quotations. For parallel experiments, explain each one's role and connect them with accurate transitions before a bounded synthesis. Mention limitations where they materially change that answer; do not append a catalogue of everything each experiment cannot establish.
 6. If no manuscript change is needed, explain why and omit a forced revised-text quotation.
-7. If the evidence cannot support the requested claim, narrow the claim, state the limitation, or mark the issue for author confirmation. Never invent data, sample sizes, statistics, locations, figure numbers, citations, or completed work.
+7. If the key evidence cannot support the proposed answer, identify the specific gap and use an appropriate narrower claim, reasoned alternative, or author-confirmation flag. Separate essential gaps from optional strengthening in the author handoff. Do not reject relevant evidence for failing to establish unrelated or universal claims, and do not put an unapproved new experimental program into the reviewer-facing reply. Never invent data, sample sizes, statistics, locations, figure numbers, citations, or completed work.
 
 ## Produce the revision map
 
@@ -88,7 +94,7 @@ The revision map is an execution specification. It must let another model modify
 
 ## Apply the revision map
 
-Work on a copy of the originally submitted manuscript. Preserve page setup, styles, section structure, tables, figures, captions, fields, references, headers, footers, and unchanged text unless a mapped change requires otherwise.
+Work on a copy of the reviewed baseline by default. If the user supplies an already revised working manuscript, use a copy of that version for continued editing once its role is clear, and compare it with the reviewed baseline. Preserve verified author changes; reconcile conflicting factual changes with the author. The final red text must show all retained changes relative to the reviewed baseline, including earlier author edits, not just this pass. If the working version is ambiguous, prepare the response/map while clarifying the editing base. Preserve page setup, styles, section structure, tables, figures, captions, fields, references, headers, footers, and unchanged text unless a mapped change requires otherwise.
 
 - Color only newly inserted or replacement text pure red `#FF0000`.
 - Keep unchanged text in its original color and formatting, including unchanged fragments within a revised paragraph.
@@ -104,6 +110,9 @@ After applying the map, update the response's quoted revised text from the actua
 Before delivery:
 
 - Confirm that every reviewer comment appears once and every subrequest is answered.
+- Compare each complex reply's top-level headings with the reviewer's concern groups and order. Check for a missing label, a duplicated concern, or a paragraph that returns to an earlier group after another group has begun.
+- Confirm a courteous opening, clear roles and transitions for parallel evidence, and a shared conclusion that answers the concern within the evidence's scope. Keep optional experimental advice in the author handoff; retain material limitations and do not imply unapproved commitments.
+- Confirm that supplied response drafts and pre-revised manuscripts were considered, their version roles recorded, and useful existing work preserved without treating draft assertions as verified data.
 - Confirm that editor comments and unnumbered/general assessments are addressed, revised central claims agree across sections, and repeated replies use consistent evidence and figure destinations.
 - Verify sample provenance, normalization basis, and what each n represents where these affect the reply. Mark unavailable SI, figures, or source data as unverified.
 - Inspect supplied SI figures/tables and reconcile shared values with Methods and replies. Check any supplied cover letter against the actual title, editorial route, major changes, and enclosed files; do not infer SI revision completeness without its baseline.
