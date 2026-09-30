@@ -41,7 +41,7 @@ The response quotation is blue italic because it is part of the authors' reply. 
 
 Open each substantive reply with one concise, courteous acknowledgement tied to the comment, then answer the scientific point directly. This also applies to disagreement or a correction. For example: `We thank the reviewer for raising this concern about ...`, `We appreciate the opportunity to clarify ...`, or, for a specific suggestion, `We thank the reviewer for this helpful suggestion.` Adapt the wording to the actual comment; appreciation need not imply agreement. Do not begin abruptly with a verdict or routinely concede that the authors' work is inadequate. Avoid exaggerated praise, repeated identical openings, and additional thanks before every supporting experiment. Prefer `the reviewer` over gendered pronouns. If a reviewer has no further comments, acknowledge that without inventing a favorable assessment.
 
-When additional work was completed, state:
+When additional work was completed, cover the following information where applicable. These are content checks, not a fixed sentence sequence or a requirement for six separate sentences:
 
 1. what was done;
 2. which samples, conditions, or analysis were used;
@@ -51,6 +51,19 @@ When additional work was completed, state:
 6. the exact revised text.
 
 Use transitions such as `To address this concern, we...`, `The results showed...`, and `In the revised manuscript, we added...` only when they describe real actions. Do not use them as empty boilerplate.
+
+### Vary sentence structure across the full response
+
+Maintain a consistent professional voice while composing each reply around its specific purpose. The example phrases in this guide illustrate functions; they are not a phrase bank to cycle through. Changing `thank` to `appreciate` while repeating the same opening, second sentence, and paragraph structure does not solve formulaic writing.
+
+- Make the courteous opening specific to the comment: a useful suggestion, a request for clarification, a concern about evidence, or a favorable assessment calls for a different acknowledgement. A short acknowledgement can stand alone or be joined naturally to the clarification or manuscript action; do not require every reply to begin with a standalone thank-you sentence of the same shape. Never invent agreement, praise, or completed work to obtain variety.
+- Choose what follows by the actual task. A clarification can start with the relevant distinction, a data-based answer with its key finding, a correction with the verified change, and a reasoned disagreement with the shared scientific criterion and supporting rationale. Avoid repeating `To address this concern, we ...` as the second sentence throughout the document.
+- Vary grammatical subjects, clause structure, sentence length, and paragraph development where natural. A result, a comparison, a method, or a revised passage can be the subject instead of beginning every sentence with `We`. Select evidence-first or method-first exposition according to what makes that particular answer easiest to follow; preserve reviewer concern order and logical dependencies.
+- Check experiment introductions, transitions, revision announcements, and closing syntheses as well as greetings. Use a transition only when it expresses an actual relation between findings. Avoid ending every reply with the same `Taken together ...` or `These results ...` construction, and let a short correction remain short.
+
+After assembling the full response, read the first two sentences of all substantive replies side by side, then compare recurring body transitions and endings across reviewers. Look for repeated syntax and rhetorical sequences, including near-duplicates with only a few substituted words. Rewrite conspicuous repetition using the comment's actual content, then reread the affected reply for courtesy, persuasion, and scientific accuracy. This is a document-level editorial pass, not a requirement for every sentence to be unique or a numerical repetition threshold.
+
+Keep scientific terms, sample/group names, numerical results, claim strength, and figure references stable. Never paraphrase verbatim reviewer comments or exact manuscript quotations merely to add variety. Repetition needed for precision or an independently understandable reply is acceptable; avoid ornate synonyms, forced passive voice, extra verbosity, or new limitations introduced solely to sound different.
 
 ### Persuasive framing from the authors' perspective
 

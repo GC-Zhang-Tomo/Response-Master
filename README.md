@@ -71,6 +71,7 @@ A prewritten response and a pre-revised manuscript are optional, valuable refere
 ## Reply quality / 回复质量
 
 - Begin substantive replies with brief, context-specific thanks or appreciation before the direct answer; courteous disagreement does not require conceding the reviewer's interpretation.
+- Vary openings, second sentences, evidence presentation, transitions, and endings across the whole response. A final editorial pass checks repeated sentence patterns, not just identical words, while preserving technical terms and exact quotations.
 - Organize complex replies around the reviewer's concern groups and order. Several experiments or a result and its limitation can belong under one point.
 - Use key evidence to answer the actual concern. Separate essential gaps from optional strengthening; do not demand comprehensive new experiments merely for completeness.
 - Explain how parallel experiments complement one another and end with a bounded shared conclusion. Keep material limitations, without turning every result into a list of what it cannot prove.
@@ -78,6 +79,8 @@ A prewritten response and a pre-revised manuscript are optional, valuable refere
 回复目标是用可信、针对性的证据回应审稿人的核心疑虑。分点跟随问题的逻辑，多项实验围绕共同回答衔接；真正影响结论的缺口仍需指出，额外完善建议留给作者选择。
 
 写作立场是帮助作者有理有据地说服审稿人：突出优势、关键证据及其对 concern 的回应，避免反复主动承认与当前问题无关的不足。内部证据审查与对外 reply 分开；只保留直接涉及审稿问题或影响解释真实性的必要限制，并简洁说明，不让泛泛的自我否定主导回复。
+
+整篇 response 还需进行句式检查：并排检查各条回复的前两句，并检查实验引入、过渡和结尾，避免只替换感谢语而沿用相同句型。表达随问题和证据自然变化，保持礼貌与说服力；科学术语、数据、审稿人原文和稿件精确引文不为求变化而改写。
 
 ## Lab formatting conventions / 回复与红字格式
 
