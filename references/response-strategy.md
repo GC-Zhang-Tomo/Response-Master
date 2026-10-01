@@ -31,6 +31,20 @@ For each concern, decide whether the appropriate action is a factual correction,
 
 Prefer the smallest evidence-supported response that resolves the concern. Before recommending another experiment, identify the unanswered inference and check whether existing results, a clearer explanation, or a narrower claim already resolve it. Keep optional validation in author-facing advice. Do not write `we would perform`, `we will add`, or a commitment to withdraw a claim unless the authors authorized that action; distinguish a proposed edit from a confirmed change. If the reviewer explicitly requests something unavailable, answer that request with the supported alternative, scope boundary, or author-approved plan.
 
+## Reconcile apparently conflicting experiments
+
+When a reviewer contrasts two results, identify what each assay actually measures: sample state, perturbation, concentration, observation time, spatial scale, and denominator, as relevant. Distinguish a representative field or individual trajectory from a population measurement, signal intensity from material abundance, and externally induced events from spontaneous behavior. Explain the methodological reason for different conditions using supplied records; do not invent instrument limitations or assume a published setup matches the current one.
+
+Then give the positive bridge: the shared observation, targeted control, reanalysis, or model-based estimate that makes the results compatible with the proposed answer. Explain what that bridge supports. Technical reasons for using different conditions do not themselves prove that the mechanisms are identical. Label an extrapolation as an estimate and identify its relevant assumptions; do not present it as a directly observed event. If the proposed bridge remains an interpretation, phrase it accordingly while keeping the supported common finding prominent.
+
+## Show why a targeted validation is sufficient
+
+For a concern about an omitted component, altered reagent, or choice of model, identify the specific inference under challenge. Use the supplied comparison to show what changes and what remains supported: for example, a cofactor can change efficiency while a tested organizing feature persists, or a changed assay condition can make a previously unresolved response measurable. Describe the new condition explicitly; it does not retroactively turn the original experiment into a positive result.
+
+If label or mutation effects are questioned, connect any available matched functional controls to the measurements that depend on that reagent. If a readout is unsuitable for a particular sample, explain the reason and use an appropriate supplied alternative to address the intended endpoint. Do not copy a historical example's entire assay panel into a new project's requirements. A focused result or reanalysis can be enough when it answers the concern.
+
+Distinguish validation of the paper's central finding from a complete account of every associated process. After presenting the relevant evidence, explain any remaining scope boundary in terms of the study's actual question; `beyond scope` alone is not an answer to a central objection. If a comparator supports the outcome but not the proposed mechanism, retain that useful result and limit the mechanism to the tested context rather than implying universal generality. Evidence of biological activity can strengthen a proof of concept without establishing therapeutic readiness; discuss translation constraints when the reviewer asks about them or the manuscript claims that scope.
+
 ## Propagate changes in claims
 
 For each central claim under challenge, record the original assertion, measured endpoint, supported replacement, remaining limitation, and all affected locations. Distinguish a proxy readout from the mechanism or downstream outcome it is being used to suggest, and local resemblance from equivalence of an entire system.
@@ -72,3 +86,5 @@ For a questioned image feature, directly explain the feature or acknowledge that
 Treat response quotations as proposed wording until inserted. For final delivery, extract the passage from the actual destination file, including passages spanning several paragraphs. Compare body text and figure captions as well as Methods. A missing match may reflect a stale quote, citation rendering, or an unavailable SI file; investigate instead of rewriting facts to force a match.
 
 Check substantive differences between baseline and revision independently of text color. Red text can be incomplete, and a red paragraph can contain unchanged text. Record deletions, moved sections, and unrelated factual changes separately. Author lists, affiliations, contributions, funding, and declarations require explicit author-supplied instructions and must not be inferred from new experiments.
+
+Track non-prose requests separately from textual edits. A requested data deposition, accession identifier, validation output, or availability statement needs its own response and status; adding a citation or clarifying Methods does not automatically satisfy it. Report completion only when supported, otherwise record the pending action or the authors' reasoned response. Do not impose these deliverables when neither the reviewer nor the applicable submission requirements call for them.

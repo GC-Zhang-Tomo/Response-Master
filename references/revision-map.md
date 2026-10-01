@@ -39,6 +39,8 @@ For linked changes, reuse these fields rather than creating disconnected entries
 
 In **Reviewer concern**, retain the main concern and subrequest relationship used in the reply. Multiple experiments may support one answer; separate executable edits do not require separate top-level reply points. In **Dependencies or author confirmation**, distinguish an essential gap from optional strengthening. Keep optional experiments outside the required execution map unless the user elects to include them.
 
+When a reviewer explicitly requests data deposition, an accession identifier, or another deliverable beyond prose, record its status and the linked availability/Methods edit in the existing **Dependencies**, **Target document**, and **Verification** fields. Do not mark that request complete merely because a reference or explanatory sentence was added.
+
 For an already revised working manuscript, compare it with the reviewed baseline and label relevant changes as already present, needing adjustment, or still to apply. Carry forward verified edits and refresh the response's quotations from the selected working version. Record discrepancies between a draft's claimed changes and the actual files rather than assuming either version is correct. In the template, expand the baseline metadata to record both the reviewed baseline and the editing copy; the evidence-input field can list the response draft.
 
 ## Location rules

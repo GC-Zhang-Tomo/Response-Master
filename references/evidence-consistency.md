@@ -26,6 +26,8 @@ An honest limitation does not invalidate the positive evidence. Include it in th
 
 - Match causal language to causal evidence.
 - Distinguish direct experimental results from interpretation and speculation.
+- Keep proposed explanations tentative throughout their supporting sentences, not only in an opening label such as `working hypothesis`. Structural resemblance or a general quality metric alone does not establish a unique assignment or an unobserved mechanistic pathway.
+- Preserve the difference between a weak association and independence, no detected difference and demonstrated equivalence, and non-detection and universal absence. State the positive finding at the tested scope; persuasive writing must not change the statistical result or the assay's detection meaning.
 - Report sample sizes, replicates, conditions, statistical tests, exact values, and figure destinations only when supplied or verifiable.
 - When an experiment addresses only part of a request, first check whether the other supplied evidence or a clarification addresses the rest. If a material gap remains, state it and narrow only the claim that exceeds the combined evidence.
 - If authors reasonably decline a requested experiment, explain the scientific or practical reason, use existing evidence carefully, and revise claims when needed.

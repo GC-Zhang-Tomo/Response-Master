@@ -68,7 +68,7 @@ Always read [lab-style.md](references/lab-style.md) and [evidence-consistency.md
 
 Read [revision-map.md](references/revision-map.md) when creating or applying a manuscript revision map.
 
-Read [response-strategy.md](references/response-strategy.md) when a comment has multiple concerns or uses parallel experiments, when it challenges the central claim, novelty, sample provenance, experimental comparability, statistics, or figure evidence, or when checking SI or a cover letter. It covers concern mapping, evidence synthesis, editorial context, alternative response strategies, manuscript-wide claim changes, and linked experiment/figure/method updates.
+Read [response-strategy.md](references/response-strategy.md) when a comment has multiple concerns or uses parallel experiments, when it challenges the central claim, novelty, sample provenance, experimental comparability, statistics, or figure evidence, or when checking SI or a cover letter. It covers concern mapping, reconciling different readouts, targeted validation, editorial context, alternative response strategies, manuscript-wide claim changes, and linked experiment/figure/method updates.
 
 Use [lab-response-template.docx](assets/lab-response-template.docx) for the response and [manuscript-revision-map-template.docx](assets/manuscript-revision-map-template.docx) for the revision map. Replace every placeholder; do not leave instructional text in a final deliverable.
 
@@ -112,6 +112,7 @@ After applying the map, update the response's quoted revised text from the actua
 Before delivery:
 
 - Confirm that every reviewer comment appears once and every subrequest is answered.
+- For apparent experimental discrepancies, check that the reply explains the relevant difference in readout or conditions and identifies the evidence connecting them. For targeted validations, state which inference is now supported without automatically requiring a complete new mechanistic study. Track explicit non-prose requests, such as data deposition, to their own status.
 - Compare each complex reply's top-level headings with the reviewer's concern groups and order. Check for a missing label, a duplicated concern, or a paragraph that returns to an earlier group after another group has begun.
 - Confirm a courteous opening, clear roles and transitions for parallel evidence, and a shared conclusion that answers the concern within the evidence's scope. Keep optional experimental advice in the author handoff; retain material limitations and do not imply unapproved commitments.
 - Perform a whole-response style pass: compare the first two sentences of replies side by side, then their experiment introductions, transitions, and endings. Revise conspicuously repeated wording and sentence patterns, including synonym-swapped templates. Preserve necessary technical repetition, reviewer quotations, exact manuscript quotations, and scientific meaning.

@@ -1,6 +1,6 @@
 # Lab response style
 
-This style was initially distilled from two internal response packages and refined using a third package with baseline and revised manuscripts. Preserve the stable shared features below. An example is not proof of acceptance, scientific correctness, or complete formatting. Do not imitate grammatical errors, verbosity, or unsupported claims from an old response.
+This style was initially distilled from two internal response packages, refined using a third package with baseline and revised manuscripts, and extended through three more response/revised-manuscript pairs. Preserve the stable shared features below while following the user's current preferences for courtesy, persuasion, and sentence variety. An example is not proof of acceptance, scientific correctness, or complete formatting. Do not imitate grammatical errors, repetitive openings, verbosity, unsupported claims, or an example's incidental color variation.
 
 ## Page and typography
 
@@ -65,6 +65,10 @@ After assembling the full response, read the first two sentences of all substant
 
 Keep scientific terms, sample/group names, numerical results, claim strength, and figure references stable. Never paraphrase verbatim reviewer comments or exact manuscript quotations merely to add variety. Repetition needed for precision or an independently understandable reply is acceptable; avoid ornate synonyms, forced passive voice, extra verbosity, or new limitations introduced solely to sound different.
 
+### Match the reply's length to the task
+
+A label, typo, or missing-callout correction usually needs a courteous acknowledgement, the concrete correction, and its location. Do not inflate it into a scientific argument or force a long quotation. A substantive concern needs enough explanation and key evidence to resolve the inference at issue; a general assessment can receive a concise overview. For recurring concerns, tailor each reply to the reviewer's specific emphasis, keep a short self-contained answer, and cross-reference the detailed response instead of pasting a long identical rationale into several replies. Exact manuscript quotations may legitimately repeat when needed for traceability.
+
 ### Persuasive framing from the authors' perspective
 
 The reply should make the strongest accurate case for the authors' work. After the courteous opening, foreground the direct answer and strongest relevant evidence, explain why it addresses the reviewer's concern, and use complementary findings to reinforce that argument. Emphasize demonstrated strengths rather than routinely opening with what the study lacks. Acknowledging the importance of a concern does not mean agreeing that the data are inadequate or that the requested experiment is the only valid answer.
@@ -94,6 +98,8 @@ Introduce a quotation with its stable manuscript location, for example:
 `In the revised Results section, under “...”, paragraph 2, we added the following text:`
 
 Then quote the exact final wording. Do not paraphrase the manuscript in the response quotation. If the manuscript is changed later, refresh the quotation from the revised manuscript.
+
+Within that quotation, retain the destination manuscript's final figure identifiers. Put any response-figure-to-manuscript mapping outside the quotation; do not substitute a temporary response figure number into supposedly exact manuscript text. Diagnose unmatched quotations individually: citation display or spacing, stale numbering, changed wording, and unavailable destination files are different issues, not automatic evidence that an edit was never made.
 
 When only drafting a response and map, identify quotations as proposed edits in the author handoff and the output status. Do not report them as verified insertions until the manuscript has actually been revised. Preserve multi-paragraph quotations as complete blocks and check every paragraph against the destination file.
 

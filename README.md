@@ -7,7 +7,7 @@
 
 **Response Master** 是一个用于科研论文投稿后返修的 Codex skill。它能够根据审稿意见、补充实验结果、计划修改内容和导师要求，生成逐条回复、可执行的稿件修改清单，以及可选的红字修改稿。
 
-> Status: demo. The workflow was initially distilled from two internal revision packages and refined using a third package containing a response, baseline/revised manuscripts, a cover letter, and revised SI. These examples are not independent scientific validation. Every claim and numerical result must still be checked by the authors before submission.
+> Status: demo. The workflow was initially distilled from two internal revision packages, refined using a third package containing a response, baseline/revised manuscripts, a cover letter, and revised SI, and extended through three more response/revised-manuscript pairs. These examples are not independent scientific validation. Every claim and numerical result must still be checked by the authors before submission.
 
 ## What it produces / 输出内容
 
@@ -81,6 +81,10 @@ A prewritten response and a pre-revised manuscript are optional, valuable refere
 写作立场是帮助作者有理有据地说服审稿人：突出优势、关键证据及其对 concern 的回应，避免反复主动承认与当前问题无关的不足。内部证据审查与对外 reply 分开；只保留直接涉及审稿问题或影响解释真实性的必要限制，并简洁说明，不让泛泛的自我否定主导回复。
 
 整篇 response 还需进行句式检查：并排检查各条回复的前两句，并检查实验引入、过渡和结尾，避免只替换感谢语而沿用相同句型。表达随问题和证据自然变化，保持礼貌与说服力；科学术语、数据、审稿人原文和稿件精确引文不为求变化而改写。
+
+Additional examples inform how to reconcile different assay readouts, explain the scope of targeted validations, keep simple corrections concise, and distinguish proof-of-concept findings from broader claims. Requested data depositions or other non-prose deliverables receive their own status. Temporary response-figure numbers must not replace final manuscript numbers inside exact quotations.
+
+新增示范进一步补强了实验差异的解释、关键验证与研究范围的衔接、简单问题的简洁回答，以及回复引文与正式稿件图号的同步。示范中的重复表达、过强推断和未核实完成事项不作为可模仿规则。
 
 ## Lab formatting conventions / 回复与红字格式
 
@@ -217,7 +221,7 @@ Keep real revision packages in a controlled working directory. Do not commit con
 
 ## Limitations / 当前限制
 
-- The current demo draws on three internal revision packages; the added package includes revised SI and a cover letter but lacks a separate original review letter and the baseline SI. Its underlying raw data have not been independently verified.
+- The current demo draws on six internal revision packages. The third package includes revised SI and a cover letter but lacks a separate original review letter and the baseline SI. The three subsequently added pairs contain responses and revised manuscripts, without separate reviewed baselines, original review letters, or standalone SI files in the supplied set. Their underlying raw data have not been independently verified, and some response quotations differ from the supplied revised files.
 - It has not yet been validated against a large set of journals or article types.
 - Automated checks cannot establish scientific correctness.
 - Complex Word fields, Zotero citations, figures, and supplementary files still require final visual inspection.
